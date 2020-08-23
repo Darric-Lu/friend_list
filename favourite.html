@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Friend_list</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-lg">
+    <div class="col">
+      <!--  Navbar  -->
+      <nav class="col-md navbar navbar-expand-lg navbar-dark bg-primary mt-5 rounded">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" id="home" href="index.html">New Friends List</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="favourite.html">Favorite</a>
+            </li>
+        </div>
+      </nav>
+      <!--  Totle  -->
+      <div class="card mt-3 cards-table">
+        <div class="card-body container-lg" role="alert">
+          <div class="row m-2">
+            <div class="col-6">
+              <h2 id='total'>Favorite Friends</h2>
+            </div>
+            <div id="mode-btn" class="col-6 d-flex justify-content-end">
+              <a id="list-btn" href="#"><i class="fa fa-bars fa-2x ml-3" aria-hidden="true"></i></a>
+              <a id="card-btn " href="#"><i class="fa fa-th fa-2x ml-3" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <!--  cards  -->
+          <div class="container mt-3">
+            <div class="row" id="favorite-firends-list"></div>
+          </div>
+          <!-- paginator -->
+          <nav aria-label="Page navigation example">
+            <ul id="paginator" class="pagination justify-content-center mt-3"></ul>
+          </nav>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="list-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg rounded">
+          <div class="modal-content container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-6 mt-3 mb-3 d-flex justify-content-center" id="modal-image">
+                <img src="https://randomuser.me/api/portraits/women/17.jpg" alt="newFriends"
+                  class="image-fuid rounded-circle" style="width:295px">
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="modal-body" id="modal-body">
+                  <p id="modal-name">Name：Guillaume Vincent</p>
+                  <p id="modal-gender">Gender：male</p>
+                  <p id="modal-region">Region：CH</p>
+                  <p id="modal-birthday">Birthday：1995-05-05</p>
+                  <p id="modal-email">Email：guillaume.vincent@example.com</p>
+                </div>
+                <div class="modal-footer">
+                  <div class="row">
+                    <div class="col-1">
+                      <p id="modal-id" class="NoDisplay">id：01</p>
+                    </div>
+                    <div class="col-6">
+                      <button type="button" id="delete-favorite-btn" class="btn btn-danger"
+                        data-dismiss="modal">移除</button>
+                    </div>
+                    <div class="col-4">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="favourite.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
